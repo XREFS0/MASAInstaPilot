@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EBBCFB2A-94C1-4BB0-8C9E-22CCC7C93D39}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MASAInstaPilot</RootNamespace>
+    <AssemblyName>MASA InstaPilot</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>MASAInstaPilot.ico</ApplicationIcon>
+    <StartupObject>MASAInstaPilot.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Selenium.WebDriver" Version="4.27.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="System.Text.Json" Version="8.0.5" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="InstagramBotDesign\ByHashTag.cs" />
+    <Compile Include="InstagramBotDesign\ByHashtag1.cs" />
+    <Compile Include="InstagramBotDesign\ByName.cs" />
+    <Compile Include="InstagramBotDesign\ByName1.cs" />
+    <Compile Include="InstagramBotDesign\GetFollowersFromUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstagramBotDesign\GetFollowersFromUser.Designer.cs">
+      <DependentUpon>GetFollowersFromUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InstagramBotDesign\GetUsersFromPost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstagramBotDesign\GetUsersFromPost.Designer.cs">
+      <DependentUpon>GetUsersFromPost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InstagramBotDesign\GetUsersFromPostByComments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstagramBotDesign\GetUsersFromPostByComments.Designer.cs">
+      <DependentUpon>GetUsersFromPostByComments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InstagramBotDesign\Get_Followings_From_User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstagramBotDesign\Get_Followings_From_User.Designer.cs">
+      <DependentUpon>Get_Followings_From_User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InstagramBotDesign\Get_Users_From_Hashtag.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstagramBotDesign\Get_Users_From_Hashtag.Designer.cs">
+      <DependentUpon>Get_Users_From_Hashtag.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InstagramBotDesign\HelpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstagramBotDesign\HelpForm.Designer.cs">
+      <DependentUpon>HelpForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InstagramBotDesign\InstagramFollowUnfollow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstagramBotDesign\InstagramFollowUnfollow.Designer.cs">
+      <DependentUpon>InstagramFollowUnfollow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InstagramBotDesign\OneClickFollow_Unfollow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstagramBotDesign\OneClickFollow_Unfollow.Designer.cs">
+      <DependentUpon>OneClickFollow_Unfollow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InstagramBotDesign\Program.cs" />
+    <Compile Include="InstagramBotDesign\Properties\Resources.Designer.cs">
+      <DependentUpon>Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="InstagramBotDesign\Properties\Settings.Designer.cs">
+      <DependentUpon>Settings.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="InstagramBotDesign\RegData.cs" />
+    <Compile Include="InstagramBotDesign\RegistrationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstagramBotDesign\RegistrationForm.Designer.cs">
+      <DependentUpon>RegistrationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InstagramBotDesign\SignInMethodes.cs" />
+    <Compile Include="InstagramBotDesign\targeting.cs" />
+    <Compile Include="Microsoft\CodeAnalysis\EmbeddedAttribute.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="System\Runtime\CompilerServices\NullableAttribute.cs" />
+    <Compile Include="System\Runtime\CompilerServices\NullableContextAttribute.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="InstagramBotDesign\GetFollowersFromUser.resx">
+      <DependentUpon>GetFollowersFromUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstagramBotDesign\GetUsersFromPost.resx">
+      <DependentUpon>GetUsersFromPost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstagramBotDesign\GetUsersFromPostByComments.resx">
+      <DependentUpon>GetUsersFromPostByComments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstagramBotDesign\Get_Followings_From_User.resx">
+      <DependentUpon>Get_Followings_From_User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstagramBotDesign\Get_Users_From_Hashtag.resx">
+      <DependentUpon>Get_Users_From_Hashtag.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstagramBotDesign\HelpForm.resx">
+      <DependentUpon>HelpForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstagramBotDesign\InstagramFollowUnfollow.resx">
+      <DependentUpon>InstagramFollowUnfollow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstagramBotDesign\OneClickFollow_Unfollow.resx">
+      <DependentUpon>OneClickFollow_Unfollow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstagramBotDesign\Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstagramBotDesign\RegistrationForm.resx">
+      <DependentUpon>RegistrationForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="app.manifest" />
+    <None Include="InstagramBotDesign\Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
